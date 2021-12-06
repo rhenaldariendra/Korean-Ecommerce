@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/login_style.css">
+    <script type="text/javascript" src="./js/jquery.js"></script>
+    <!-- <script type="text/javascript" src="./js/classlist.js"></script> -->
+    <script defer src="./js/validation.js"></script>
+    <title>Account</title>
+</head>
+
+<body>
+    <section>
+        <div class="containers">
+            <div class="user signinBox">
+                <div class="imgBox">
+                    <img src="./Assets/Image/4ca1049052b620c87ff842a5e79b21ce.jpg" alt="">
+                </div>
+                <div class="formBox">
+
+                    <form>
+                        <h2>Sign In</h2>
+                        <input type="text" name="uname" placeholder="Username">
+                        <input type="Password" name="" placeholder="Password">
+                        <input type="submit" name="" value="Login">
+                        <p class="signup">Don't have an account ? <a href="#" onclick="toogleForm();">Sign Up</a></a></p>
+                        <a href="home.html" class="gotohome"><p>Go to Home</p></a>
+                    </form>
+                </div>
+            </div>
+            <div class="user signupBox">
+                <div class="formBox">
+                    <div id="error_message"></div>
+                    <form id="form" onsubmit="return validation();">
+                        <h2>Create an account</h2>
+                        <input type="text" name="fname" id="fname" placeholder="Fullname">
+                        <input type="text" name="uname" id="uname" placeholder="Username">
+                        <input type="text" placeholder="Phone" id="phone">
+                        <input type="email" name="email" id="email" placeholder="Email Address">
+                        <div class="testing">
+                            <p class="gends">Gender</p>
+                            <input type="radio" id="male" name="genders" value="male" />
+                            <label for="male">Male</label>
+    
+                            <input type="radio" id="two" name="genders" value="female" />
+                            <label for="female">Female</label>
+                        </div>
+                        <input type="number" name="age" id="age" placeholder="Age">
+                        <input type="Password" name="pass" id="pass" placeholder="Create Password">
+                        <input type="Password" name="confpass" id="confpass" placeholder="Confirm Password">
+                        <input type="submit" name="" value="Sign Up">
+                        <p class="signup">Already have an account ? <a href="#" onclick="toogleForm();">Sign In</a></a></p>
+                        <a href="home.html" class="gotohome"><p>Go to Home</p></a>
+                    </form>
+                </div>
+                <div class="imgBox">
+                    <img src="./Assets/Image/c42607edb567e1bb3a1234ac5a08a547.jpg" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <script type="text/javascript">
+        function toogleForm(){
+            var containers = document.querySelector('.containers');
+            containers.classList.toggle('active')
+            // document.querySelector('div2').classList.toggle("active");
+            // document.getElementById('.containers').classList.toggle("clicked");
+        }
+    </script>
+
+</body>
+
+</html>
